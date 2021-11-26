@@ -5,3 +5,6 @@ channels:
   - defaults
 dependencies:
   - cgatcore
+  - pip
+  - pip:
+      - -r requirements.txt
