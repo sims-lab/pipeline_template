@@ -23,7 +23,7 @@ jobs:
     # The build matrix that runs the job in a variation of job configurations
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10']
+        python-version: ['3.8', '3.9']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
