@@ -1,0 +1,10 @@
+name: pipeline-env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cgatcore
+  - pip
+  - pip:
+      - -r requirements.txt

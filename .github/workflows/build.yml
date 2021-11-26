@@ -23,7 +23,7 @@ jobs:
     # The build matrix that runs the job in a variation of job configurations
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10']
+        python-version: ['3.8', '3.9']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -53,10 +53,12 @@ jobs:
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2.1.1
         with:
+          activate-environment: pipeline-env
+          environment-file: environment.yml
           python-version: ${{ matrix.python-version }}
           mamba-version: "*"
-          channels: conda-forge,defaults
-          channel-priority: true
+          condarc-file: condarc.yml
+          auto-activate-base: false
 
       - name: Install package dependencies
         run: |
@@ -74,4 +76,8 @@ jobs:
         
       - name: Pip information
         run: which pip
+        shell: bash -l {0}
+      
+      - name: Run pipeline
+        run: python pipeline.py make full -v 5 --local
         shell: bash -l {0}
