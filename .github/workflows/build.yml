@@ -75,3 +75,7 @@ jobs:
       - name: Pip information
         run: which pip
         shell: bash -l {0}
+      
+      - name: Run pipeline
+        run: python pipeline.py make full -v 5 --local
+        shell: bash -l {0}
