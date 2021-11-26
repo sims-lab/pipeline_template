@@ -53,10 +53,12 @@ jobs:
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2.1.1
         with:
+          activate-environment: pipeline-env
+          environment-file: environment.yml
           python-version: ${{ matrix.python-version }}
           mamba-version: "*"
-          channels: conda-forge,defaults
-          channel-priority: true
+          condarc-file: etc/example-condarc.yml
+          auto-activate-base: false
 
       - name: Install package dependencies
         run: |
