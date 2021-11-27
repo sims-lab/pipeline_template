@@ -57,7 +57,7 @@ jobs:
           environment-file: environment.yml
           python-version: ${{ matrix.python-version }}
           mamba-version: "*"
-          condarc-file: condarc.yml
+          condarc-file: etc/condarc.yml
           auto-activate-base: false
 
       - name: Install package dependencies
