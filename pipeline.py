@@ -114,11 +114,14 @@ def loadWordCounts(infile, outfile):
     P.load(infile, outfile, "--add-index=word")
 
 
-# ---------------------------------------------------
-# Generic pipeline tasks
 @follows(loadWordCounts)
 def full():
     pass
+
+
+##################
+# Main execution #
+##################
 
 
 def main(argv=None):
