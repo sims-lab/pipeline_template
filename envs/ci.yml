@@ -1,0 +1,11 @@
+name: pipeline_template
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cgatcore
+  - pip
+  - pip:
+      - drmaa
+      - flake8
