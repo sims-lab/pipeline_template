@@ -103,7 +103,7 @@ def countWords(infile, outfile):
     # The statement is interpolated with any options that are defined
     # in the configuration files or variable that are declared in the calling function.
     # For example, %(infile)s will we substituted with the contents of the variable `infile`.
-    P.run(statement, job_condaenv="pipeline-env")
+    P.run(statement, job_condaenv="pipeline_template")
 
 
 @transform(countWords, suffix(".counts"), "_counts.load")

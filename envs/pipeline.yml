@@ -1,4 +1,4 @@
-name: pipeline-env
+name: pipeline_template
 channels:
   - bioconda
   - conda-forge
@@ -7,4 +7,4 @@ dependencies:
   - cgatcore
   - pip
   - pip:
-      - -r requirements.txt
+      - drmaa
