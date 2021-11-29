@@ -24,8 +24,8 @@ Template of pipeline using [cgatcore][link-cgatcore].
 - [ ] Clone the new repository to the computer where the pipeline will be run.
 - [ ] Edit the file `pipeline.py` to define the pipeline workflow.
   + [ ] Add import statements to the `Imports` section.
-  + [ ] Edit the `Configuration` as needed, if needed.
-  + [ ] Replace the `Workflow` section with your own pipeline steps.
+  + [ ] Edit the section `Configuration` as needed, if needed.
+  + [ ] Replace the contents of the section `Workflow` with your own pipeline steps.
   + The `Main execution` section should be left as-is
 - [ ] Edit the file `environment.yml` to define a Conda environment for running this pipeline.
 - [ ] Edit the configuration of the pipeline as needed, in the file `config.yml`.
