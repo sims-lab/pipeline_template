@@ -1,1 +1,5 @@
 # Pipeline options in YAML format
+field: value
+
+section:
+    field: value
