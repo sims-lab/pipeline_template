@@ -79,10 +79,11 @@ PARAMS = P.get_parameters("%s/config/pipeline.yml" % os.path.splitext(__file__)[
 ############
 
 
-@transform("config.yml", regex("(.*)\.(.*)"), r"\1.counts")
+@follows(mkdir("results"))
+@transform("config/pipeline.yml", regex("config/(.*)"), r"results/\1.counts")
 def countWords(infile, outfile):
     """
-    Count the number of words in the pipeline configuration files.
+    Count the number of words in the pipeline configuration file.
     """
 
     # Declare the command line statement we want to execute
