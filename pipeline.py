@@ -73,7 +73,9 @@ from cgatcore import pipeline as P
 
 # Load parameters from config file, located in `./config/pipeline.yml`.
 print("%s/config/pipeline.yml" % os.path.dirname(__file__)[0])
-PARAMS = P.get_parameters(["%s/config/pipeline.yml" % os.path.dirname(__file__)[0]])
+PARAMS = P.get_parameters(
+    "%s/config/pipeline.yml" % os.path.dirname(os.path.realpath(__file__))[0]
+)
 print(PARAMS)
 
 ############
